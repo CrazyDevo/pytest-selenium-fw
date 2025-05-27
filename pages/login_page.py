@@ -20,3 +20,6 @@ class LoginPage:
 
     def is_login_successful(self):
         assert "secure area" in self.driver.find_element(*self.login_message).text
+
+    def get_text_login_message(self):
+        return  self.driver.find_element(*self.login_message).text
