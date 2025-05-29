@@ -21,9 +21,9 @@ def browser():
 
 
 def test_valid_login(browser):
+    config_data = read_config()
     login_page=LoginPage(browser)
     login_page.load()
-    config_data=read_config()
     username=config_data["login"]["username"]
     password=config_data["login"]["password"]
     login_page.login(username,password)
