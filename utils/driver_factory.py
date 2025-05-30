@@ -34,7 +34,7 @@ def get_driver_2(browser_name,headless_mode):
     elif browser_name=="firefox":
         firefox_options = webdriver.FirefoxOptions()
         if headless_mode:
-            firefox_options.add_argument("--headless=new")
+            firefox_options.add_argument("--headless")
             firefox_options.add_argument("--windows-size=1920,1080")
         driver = webdriver.Firefox(options=firefox_options)
         driver.implicitly_wait(10)

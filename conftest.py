@@ -7,6 +7,8 @@ from utils.driver_factory import get_driver_2
 def pytest_addoption(parser):
     parser.addoption("--browser",action="store",default="chrome",help="Chrome browser: chrome or firefox")
     parser.addoption("--headless",action="store_true",default=False,help="You can run in headless mode")
+    parser.addoption("--env",action="store",default="test1",help="You can control your environment from here")
+
 
 
 
