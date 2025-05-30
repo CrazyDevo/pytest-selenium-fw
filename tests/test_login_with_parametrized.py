@@ -1,9 +1,13 @@
+import time
 from pickle import FALSE
 
 import pytest
 
 from pages.login_page import LoginPage
 from utils.configuration_reader import read_config
+from utils.driver_factory import get_driver_2
+
+
 
 @pytest.mark.parametrize(
     "username,password,expected_result",
@@ -22,6 +26,7 @@ def test_valid_login(username,password,expected_result,my_driver):
     password=password
     login_page.login(username,password)
 
+    time.sleep(5)
     if expected_result:
         login_page.is_login_successful()
     else:
